@@ -1,4 +1,4 @@
-package cm.peter.core;
+package com.github.peterasasi.cm.core;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

@@ -1,4 +1,4 @@
-package cm.peter.core.exception;
+package com.github.peterasasi.cm.core.exception;
 
 public class CryptException extends Exception {
     public CryptException() {

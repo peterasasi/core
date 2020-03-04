@@ -1,6 +1,6 @@
-package cm.peter.core;
+package com.github.peterasasi.cm.core;
 
-import cm.peter.core.exception.ParameterRequiredException;
+import com.github.peterasasi.cm.core.exception.ParameterRequiredException;
 import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;

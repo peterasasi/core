@@ -1,4 +1,4 @@
-package cm.peter.core.exception;
+package com.github.peterasasi.cm.core.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

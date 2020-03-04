@@ -1,6 +1,6 @@
-package cm.peter.core.protocol;
+package com.github.peterasasi.cm.core.protocol;
 
-import cm.peter.core.ApiReqParams;
+import com.github.peterasasi.cm.core.ApiReqParams;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 

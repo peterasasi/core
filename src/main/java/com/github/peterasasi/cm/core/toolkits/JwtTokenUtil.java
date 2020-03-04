@@ -1,4 +1,4 @@
-package cm.peter.core.toolkits;
+package com.github.peterasasi.cm.core.toolkits;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package cm.peter.core.protocol;
+package com.github.peterasasi.cm.core.protocol;
 
 public interface ApiProtocol {
 

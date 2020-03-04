@@ -1,6 +1,6 @@
-package cm.peter.core.toolkits;
+package com.github.peterasasi.cm.core.toolkits;
 
-import cm.peter.core.exception.CryptException;
+import com.github.peterasasi.cm.core.exception.CryptException;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;

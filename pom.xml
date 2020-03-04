@@ -8,10 +8,10 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>cm.peter</groupId>
+    <groupId>com.github.peterasasi.cm</groupId>
     <artifactId>core</artifactId>
     <version>1.0.0</version>
-    <name>cm-peter-core</name>
+    <name>peter-asasi.cm-core</name>
     <description>simply code for use</description>
     <packaging>jar</packaging>
     <url>http://www.xxxx.cn</url>
@@ -38,9 +38,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:peter-asasi/core.git</connection>
-        <developerConnection>scm:git:ssh://github.com:peter-asasi/core.git</developerConnection>
-        <url>http://github.com/peter-asasi/core/tree/master</url>
+        <connection>scm:git:git@github.com:peterasasi/core.git</connection>
+        <developerConnection>scm:git:ssh://github.com:peterasasi/core.git</developerConnection>
+        <url>http://github.com/peterasasi/core/tree/master</url>
     </scm>
 
 
