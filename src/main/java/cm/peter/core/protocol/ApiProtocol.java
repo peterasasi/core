@@ -5,43 +5,43 @@ public interface ApiProtocol {
     /**
      * 加密请求内容
      * @param req 请求内容
-     * @return
+     * @return String
      */
     String encryptReq(String req);
 
     /**
      * 加密响应内容
      * @param resp 响应内容
-     * @return
+     * @return String
      */
     String encryptResp(String resp);
 
     /**
      * 解密请求内容
      * @param req 请求内容
-     * @return
+     * @return String
      */
     String decryptReq(String req);
 
     /**
      * 加密响应内容
      * @param resp 响应内容
-     * @return
+     * @return String
      */
     String decryptResp(String resp);
 
     /**
      * 设置加密密钥
-     * @param key
-     * @return
+     * @param key String
+     * @return String
      */
     ApiProtocol setEncryptKey(String key);
 
     /**
      * 设置解密密钥
      *
-     * @param key
-     * @return
+     * @param key String
+     * @return String
      */
     ApiProtocol setDecryptKey(String key);
 }

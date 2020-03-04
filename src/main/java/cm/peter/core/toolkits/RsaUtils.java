@@ -18,8 +18,8 @@ public class RsaUtils {
     /**
      * 生成2048钥匙
      *
-     * @return
-     * @throws NoSuchAlgorithmException
+     * @return KeyPair
+     * @throws NoSuchAlgorithmException 异常
      */
     public static KeyPair buildKeyPair() throws NoSuchAlgorithmException {
         final int keySize = 2048;
@@ -28,25 +28,32 @@ public class RsaUtils {
         return keyPairGenerator.genKeyPair();
     }
 
-    public static String decrypt(String privateKeyPem, String message) throws Exception {
-        return decrypt(loadPrivateKeyFromPem(privateKeyPem), message);
+    /**
+     * 解密
+     * @param privateKeyPem 一行格式私钥
+     * @param origin 明文
+     * @return String 解密后
+     * @throws Exception 异常
+     */
+    public static String decrypt(String privateKeyPem, String origin) throws Exception {
+        return decrypt(loadPrivateKeyFromPem(privateKeyPem), origin);
     }
 
     /**
      * 私钥解密
      *
-     * @param privateKey PrivateKey
-     * @param message    String
+     * @param privateKey 私钥
+     * @param origin    明文
      * @return String
-     * @throws Exception
+     * @throws Exception 异常
      */
-    public static String decrypt(PrivateKey privateKey, String message) throws Exception {
+    public static String decrypt(PrivateKey privateKey, String origin) throws Exception {
         Cipher cipher = Cipher.getInstance(RSA_ALGORITHM);
         cipher.init(Cipher.DECRYPT_MODE, privateKey);
 
         ByteArrayBuilder crypto = new ByteArrayBuilder();
         int chunkLen = 256;
-        byte[] base64bytes = base64Decode(message);
+        byte[] base64bytes = base64Decode(origin);
         StringBuilder decrypt = new StringBuilder();
 
         for (int i = 0; i < base64bytes.length; i += chunkLen) {
@@ -65,8 +72,15 @@ public class RsaUtils {
         return decrypt.toString();
     }
 
-    public static String encrypt(String publicKeyPem, String message) throws Exception {
-        return encrypt(loadPublicKeyFromPem(publicKeyPem), message);
+    /**
+     * 加密
+     * @param publicKeyPem 公钥
+     * @param origin 明文
+     * @return String 加密后的
+     * @throws Exception 异常
+     */
+    public static String encrypt(String publicKeyPem, String origin) throws Exception {
+        return encrypt(loadPublicKeyFromPem(publicKeyPem), origin);
     }
 
     /**
@@ -75,7 +89,7 @@ public class RsaUtils {
      * @param publicKey PublicKey
      * @param message   String
      * @return String
-     * @throws Exception
+     * @throws Exception 异常
      */
     public static String encrypt(PublicKey publicKey, String message) throws Exception {
         return base64Encode(encryptBytes(publicKey, message));
@@ -105,8 +119,9 @@ public class RsaUtils {
      * 生成签名 sha256
      *
      * @param plainText 明文
-     * @return
-     * @throws Exception
+     * @param privateKey 私钥
+     * @return String base64签名后
+     * @throws Exception 异常
      */
     public static String signSha256(String plainText, PrivateKey privateKey) throws Exception {
         try {
@@ -126,9 +141,10 @@ public class RsaUtils {
     /**
      * 验签 SHA256withRSA
      *
-     * @param plainText
-     * @param signText
-     * @return
+     * @param plainText 明文
+     * @param signText 签名文本
+     * @param publicKey 公钥
+     * @return boolean 是否验证通过
      */
     public static boolean verify(String plainText, String signText, PublicKey publicKey) {
         try {

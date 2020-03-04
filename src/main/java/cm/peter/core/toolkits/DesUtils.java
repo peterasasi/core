@@ -33,6 +33,7 @@ public class DesUtils {
      * @param data string 需要加密的数据
      * @param key  加密需要的KEY
      * @return string
+     * @throws  CryptException 异常
      */
     public static String encrypt(String data, String key) throws CryptException {
         // 使用base64 加密 避免乱码
@@ -43,10 +44,11 @@ public class DesUtils {
     /**
      * AES加密
      *
-     * @param data 需要加密的数据
+     * @param dataBytes 需要加密的数据
      * @param key  加密需要的KEY
      * @param iv   加密需要的向量
      * @return string base64加密后的数据
+     * @throws  CryptException 异常
      */
     public static String encrypt(byte[] dataBytes, String key, String iv) throws CryptException {
         byte[] enCodeFormat = key.getBytes();
@@ -89,7 +91,7 @@ public class DesUtils {
      * @param data string aes加密返回的字符串
      * @param key string key
      * @return string
-     * @throws CryptException
+     * @throws CryptException 异常
      */
     public static String decrypt(String data, String key) throws CryptException {
         return decrypt(Base64Utils.decodeBuffer(data), key, DEFAULT_IV);
@@ -101,6 +103,7 @@ public class DesUtils {
      * @param key  解密需要的KEY 同加密
      * @param iv   解密需要的向量 同加密
      * @return String
+     * @throws  CryptException 异常
      */
     public static String decrypt(byte[] data, String key, String iv) throws CryptException {
 
