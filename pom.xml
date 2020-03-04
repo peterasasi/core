@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.github.peterasasi.cm</groupId>
     <artifactId>core</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>peter-asasi.cm-core</name>
     <description>simply code for use</description>
     <packaging>jar</packaging>
@@ -157,11 +157,11 @@
     </build>
     <distributionManagement>
         <snapshotRepository>
-            <id>oss</id>
+            <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>oss</id>
+            <id>ossrh</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
