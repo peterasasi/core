@@ -11,7 +11,7 @@
     <groupId>com.github.peterasasi.cm</groupId>
     <artifactId>core</artifactId>
     <version>1.0.3</version>
-    <name>peter-asasi.cm-core</name>
+    <name>peterasasi.cm-core</name>
     <description>simply code for use</description>
     <packaging>jar</packaging>
     <url>http://www.xxxx.cn</url>
