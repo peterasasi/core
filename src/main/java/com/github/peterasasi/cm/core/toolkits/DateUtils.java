@@ -2,8 +2,12 @@ package com.github.peterasasi.cm.core.toolkits;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class DateUtils {
+
+    public static final TimeZone timeZone = TimeZone.getTimeZone("GMT+0");
+
     /**
      * 获取时间戳 秒
      * @return Long 时间戳
@@ -20,5 +24,12 @@ public class DateUtils {
      */
     public static String formatTime(Long time, String format) {
         return new SimpleDateFormat(format).format(new Date(time * 1000));
+    }
+
+    /**
+     * 设置时区为 GMT+0
+     */
+    public static void setDefaultTimeZoneToGMTZero()  {
+        TimeZone.setDefault(timeZone);
     }
 }

@@ -13,29 +13,29 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JwtTokenUtil {
+public class JwtTokenUtils {
 
     public final static String MY_ISSUER = "DBH";
 
     public static void main(String[] args) {
         String secret = "aW16STdrY0NWSHV3eWZvSG9jVFJTUXFhemRyZU16M3d3ZkdHeFFzZ1pKYjVFMW1tU3pKR2Z2NTVDalc5OUpUNWt1OGY4VW95dnpqRGxibkVZdGNMbnUwSVpoWlRjQVhhRjJTOUNhM0J3ZlJHNnZVNHIxSHZZTlg5SjV6TkMwVDhhcExnMGFEV29TcUNsc2hEODF4YW5RY2dJYnhHajRROGRwMmtHN1hUZGF6Rm1Rck9FRHRvYXVsdVpvUVFsUkl2aGxFRGdDdUo2RHdvMlpOWkZCbkJOTHdNVDM2eVU5UXl1WUcxdDNpU3M5MWZJZTlIRnY0OGtaT01JTmUxVUpnWUpKeEFPNlFLWkxTcVNWMjNzS3JwQlNQZmtQTTU3SWEwRDFjMVgzSTkwR1ZOU2xOODN5RlRJM1NxVXZjMm5oTW9leXFHYzBNT1lyWm9Jc1dyNHZFUEdhMFExbUhjYUVDc0JFTVRDWEpyTmtITHhVVHNJOEVZOTFqYUJSYk5naGNvODBIcDVRbG5qVUlVdzFvaXFpOGRWUlpkcmVTeVByWVR6VXUxNnMxbzcyS2ViQnBhRXBNS2J5U2NzNEp4aFNPZFptalhKYlJmNENHUGkxNWJLaUVDYkEyNW9nTkdaWUtsbm9OV1dLeGZPMlVQODZ6NFZnRUJ2Y1BmQmliQkRYN0s=";
-        JwtTokenUtil jwtTokenUtil = new JwtTokenUtil();
+        JwtTokenUtils jwtTokenUtils = new JwtTokenUtils();
 //        String secret = RandomStringUtils.getRandomString(512);
 
         System.out.println("!!!secret bytes length = " + secret.getBytes().length);
 
-        jwtTokenUtil.setSecret(secret);
-        System.out.println("!!!jwtToken Secret = " + jwtTokenUtil.getSecret());
+        jwtTokenUtils.setSecret(secret);
+        System.out.println("!!!jwtToken Secret = " + jwtTokenUtils.getSecret());
 //        JwtUser user = new JwtUser();
 //        user.setUid("238");
-//        String jwtToken = jwtTokenUtil.generateToken(user);
+//        String jwtToken = jwtTokenUtils.generateToken(user);
 //        System.out.println("!!!jwtToken = " + jwtToken);
 //        String token = "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkYmgiLCJzdWIiOiJCT0IiLCJpYXQiOjE1NzQ5MjkxMzcsImV4cCI6MTU3NDk0NzEzN30.16czhy0OEAZcK5Czm2kbg3bgjfadTgmjbk0sO7dyUe4JqQ7FgOgwdfm1xDRqfhqnEEgrU8O4A28JcGLeWbpPIg";
-//        Assert.isTrue(jwtTokenUtil.validateToken(jwtToken, user), "token invalid");
+//        Assert.isTrue(jwtTokenUtils.validateToken(jwtToken, user), "token invalid");
 
-//        System.out.println("!!!getSubjectFromToken = " + jwtTokenUtil.getSubjectFromToken(jwtToken));
-//        System.out.println("!!!getExpirationDateFromToken = " + jwtTokenUtil.getExpirationDateFromToken(jwtToken).toString());
-//        Assert.isTrue(jwtTokenUtil.validateToken(jwtToken, user), "token invalid");
+//        System.out.println("!!!getSubjectFromToken = " + jwtTokenUtils.getSubjectFromToken(jwtToken));
+//        System.out.println("!!!getExpirationDateFromToken = " + jwtTokenUtils.getExpirationDateFromToken(jwtToken).toString());
+//        Assert.isTrue(jwtTokenUtils.validateToken(jwtToken, user), "token invalid");
     }
 
     public static final int JWT_TOKEN_VALIDITY = 8 * 60 * 60;

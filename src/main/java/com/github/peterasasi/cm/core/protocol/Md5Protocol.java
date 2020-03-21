@@ -47,12 +47,12 @@ public class Md5Protocol implements ApiProtocol {
 
     @Override
     public String decryptReq(String req) {
-        return null;
+        return req;
     }
 
     @Override
     public String decryptResp(String resp) {
-        return null;
+        return resp;
     }
 
     @Override
