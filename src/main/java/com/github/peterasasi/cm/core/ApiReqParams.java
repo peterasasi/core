@@ -1,7 +1,7 @@
 package com.github.peterasasi.cm.core;
 
-import com.github.peterasasi.cm.core.exception.ParameterRequiredException;
-import org.springframework.http.HttpStatus;
+
+import com.github.peterasasi.cm.core.exception.ParameterException;
 
 import java.util.ArrayList;
 
@@ -65,18 +65,18 @@ public class ApiReqParams {
         this.bussData = "";
     }
 
-    public void check() {
+    public void check() throws ParameterException {
         if (this.serviceType.isEmpty()) {
-            throw new ParameterRequiredException(HttpStatus.OK, "serviceType is required");
+            throw new ParameterException("serviceType is required");
         }
         if (this.clientId.isEmpty()) {
-            throw new ParameterRequiredException(HttpStatus.OK, "clientId is required");
+            throw new ParameterException("clientId is required");
         }
         if (this.appVersion.isEmpty()) {
-            throw new ParameterRequiredException(HttpStatus.OK, "appVersion is required");
+            throw new ParameterException("appVersion is required");
         }
         if (this.appType.isEmpty()) {
-            throw new ParameterRequiredException(HttpStatus.OK, "appType is required");
+            throw new ParameterException("appType is required");
         }
     }
 

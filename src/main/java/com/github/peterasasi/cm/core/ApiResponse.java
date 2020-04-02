@@ -1,15 +1,18 @@
 package com.github.peterasasi.cm.core;
 
-import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
 public class ApiResponse {
 
     private Object data;
     private String msg;
 
-
     private ApiResponseCode code;
+
+    public ApiResponse(Object data, String msg, ApiResponseCode code) {
+        this.data = data;
+        this.msg = msg;
+        this.code = code;
+    }
 
     public ApiResponse() {
         this.code = ApiResponseCode.INITIAL;

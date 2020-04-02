@@ -6,7 +6,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.io.Encoders;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.util.Assert;
 
 import java.security.Key;
 import java.util.Date;
@@ -114,7 +113,6 @@ public class JwtTokenUtils {
     }
 
     private Key getSigningKey() {
-        Assert.notNull(this.secret, "secret cant be null");
         byte[] keyBytes = Decoders.BASE64.decode(this.secret);
         return Keys.hmacShaKeyFor(keyBytes);
     }
