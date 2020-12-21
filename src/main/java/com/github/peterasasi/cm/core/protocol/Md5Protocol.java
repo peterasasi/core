@@ -67,4 +67,14 @@ public class Md5Protocol implements ApiProtocol {
         this.key = key;
         return this;
     }
+
+    @Override
+    public void setApiUri(String apiUri) {
+
+    }
+
+    @Override
+    public String getApiUri() {
+        return "";
+    }
 }

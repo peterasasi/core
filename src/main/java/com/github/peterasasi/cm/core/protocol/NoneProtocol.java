@@ -32,4 +32,14 @@ public class NoneProtocol implements ApiProtocol {
     public ApiProtocol setDecryptKey(String key) {
         return this;
     }
+
+    @Override
+    public void setApiUri(String apiUri) {
+
+    }
+
+    @Override
+    public String getApiUri() {
+        return "";
+    }
 }

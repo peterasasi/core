@@ -2,6 +2,10 @@ package com.github.peterasasi.cm.core.protocol;
 
 public interface ApiProtocol {
 
+    void setApiUri(String apiUri);
+
+    String getApiUri();
+
     /**
      * 加密请求内容
      * @param req 请求内容
